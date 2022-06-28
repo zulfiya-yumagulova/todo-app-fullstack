@@ -3,7 +3,7 @@ var todosRouter = express.Router();
 
 /* GET users listing. */
 todosRouter.get("/", function (req, res, next) {
-  res.send("respond with a resource");
+  res.json({ message: "All the todos" });
 });
 
 export default todosRouter;
