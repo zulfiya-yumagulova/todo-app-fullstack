@@ -30,7 +30,10 @@ export default function Input() {
           style={{ marginLeft: "75px" }}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <button className="btn btn-success" style={{ marginLeft: "15px" }}>
+        <button
+          className="btn btn-success"
+          style={{ marginLeft: "15px", marginRight: "15px" }}
+        >
           Add
         </button>
       </form>
