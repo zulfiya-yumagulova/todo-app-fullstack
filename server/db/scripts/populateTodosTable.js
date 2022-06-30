@@ -5,7 +5,7 @@ const sqlString = ``;
 async function populateTodosTable() {
   for (let i = 0; i < todos.length; i++) {
     const todoDescription = todos[i].description;
-    console.log(todos[i]);
+    console.log(todosg[i]);
 
     const data = await query(
       `INSERT INTO todos (description) VALUES ($1) RETURNING description`,

@@ -2,7 +2,7 @@ import pg from "pg";
 import dotenv from "dotenv";
 import * as config from "../config.js";
 dotenv.config();
-console.log("Env Var", config.user);
+// console.log("Env Var", config.user);
 
 const pool = new pg.Pool({
   user: config.user,
