@@ -24,11 +24,6 @@ export default function ListTodos() {
             <th>Delete</th>
           </tr>
         </thead>
-        {/* <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-          </tr> */}
         <tbody>
           {todos.map((todo) => (
             <tr key={todo.id}>

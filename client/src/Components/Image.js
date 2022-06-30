@@ -6,7 +6,7 @@ export default function Image() {
   return (
     <div className="image-container">
       <img src={IMG}></img>
-      {/* <p>Add Something</p> */}
+      <h1>Add A Todo</h1>
     </div>
   );
 }

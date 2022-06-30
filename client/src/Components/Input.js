@@ -23,7 +23,6 @@ export default function Input() {
     <Fragment>
       {/* <Image /> */}
       <div className="container">
-        <h1 className="text-center my-5">Add a Todo</h1>
         <form className="d-flex" onSubmit={onSubmitForm}>
           <input
             type="text"
