@@ -14,6 +14,20 @@ export default function ListTodos() {
     getTodos();
   }, []);
 
+  // Delete Todo function
+  const deleteTodo = async (id) => {
+    try {
+      const response = await fetch(`http://localhost:5000/todos/${id}`, {
+        method: "DELETE",
+        // headers: { "Content-type": "application/json" },
+      });
+      setTodos(todos.filter((todo) => todo.id !== id));
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <Fragment>
       <table className="table mt-5">
@@ -28,8 +42,17 @@ export default function ListTodos() {
           {todos.map((todo) => (
             <tr key={todo.id}>
               <td>{todo.description}</td>
-              <td>Edit</td>
-              <td>Delete</td>
+              <td>
+                <button className="btn btn-warn">Edit</button>
+              </td>
+              <td>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => deleteTodo(todo.id)}
+                >
+                  Delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>

@@ -1,9 +1,11 @@
 import createError from "http-errors";
 import express from "express";
+import cors from "cors";
 
 import todosRouter from "./routes/todos.js";
 
 const app = express();
+app.use(cors());
 
 // Add Access Control Allow Origin headers
 app.use((req, res, next) => {
