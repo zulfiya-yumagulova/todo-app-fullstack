@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-
+import EditTodo from "./EditTodo.js";
 export default function ListTodos() {
   const [todos, setTodos] = useState([]);
   const getTodos = async () => {
@@ -34,7 +34,7 @@ export default function ListTodos() {
         <thead>
           <tr>
             <th>Description</th>
-            <th>Edit</th>
+            <th></th>
             <th>Delete</th>
           </tr>
         </thead>
@@ -42,9 +42,7 @@ export default function ListTodos() {
           {todos.map((todo) => (
             <tr key={todo.id}>
               <td>{todo.description}</td>
-              <td>
-                <button className="btn btn-warn">Edit</button>
-              </td>
+              <td>{/* <EditTodo todo={todo} /> */}</td>
               <td>
                 <button
                   className="btn btn-danger"
