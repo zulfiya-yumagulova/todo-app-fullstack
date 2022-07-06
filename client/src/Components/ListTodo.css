@@ -1,0 +1,31 @@
+.my-table {
+  /* border: 1px solid #333; */
+  width: 80%;
+  margin-left: 9.8rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.my-table {
+  height: 70px;
+}
+
+.my-table th,
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+
+tr:hover {
+  background-color: #e8f9fd;
+}
+
+.container {
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .my-table {
+    width: 50%;
+  }
+}

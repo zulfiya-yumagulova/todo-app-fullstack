@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
+import "./ListTodo.css";
 import EditTodo from "./EditTodo.js";
 export default function ListTodos() {
   const [todos, setTodos] = useState([]);
@@ -30,31 +31,33 @@ export default function ListTodos() {
 
   return (
     <Fragment>
-      <table className="table mt-5">
-        <thead>
-          <tr>
-            <th>Description</th>
-            <th></th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {todos.map((todo) => (
-            <tr key={todo.id}>
-              <td>{todo.description}</td>
-              <td>{/* <EditTodo todo={todo} /> */}</td>
-              <td>
-                <button
-                  className="btn btn-danger"
-                  onClick={() => deleteTodo(todo.id)}
-                >
-                  Delete
-                </button>
-              </td>
+      <div className="container">
+        <table className="my-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th></th>
+              <th>Delete</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {todos.map((todo) => (
+              <tr key={todo.id}>
+                <td>{todo.description}</td>
+                <td>{/* <EditTodo todo={todo} /> */}</td>
+                <td>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => deleteTodo(todo.id)}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </Fragment>
   );
 }
