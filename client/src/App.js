@@ -7,9 +7,6 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      {/* <div className="image">
-        <img src={IMG}></img>
-      </div> */}
       <Image />
       <Input />
       <ListTodos />

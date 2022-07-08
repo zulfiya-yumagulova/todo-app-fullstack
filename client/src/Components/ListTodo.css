@@ -4,16 +4,21 @@
   margin-left: 9.8rem;
   margin-top: 3rem;
   text-align: center;
+  border-collapse: collapse;
 }
 
 .my-table {
   height: 70px;
+  max-width: 950px;
+  width: 90%;
+  margin: 20px auto 40px;
 }
 
 .my-table th,
 td {
   border-bottom: 1px solid #ddd;
-  padding: 15px;
+  padding: 10px;
+  text-align: center;
 }
 
 tr:hover {
@@ -24,8 +29,53 @@ tr:hover {
   overflow-x: auto;
 }
 
-@media screen and (max-width: 768px) {
+/* Responsive */
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+
+@media (max-width: 575px) {
+  .my-table thead {
+    display: none;
+  }
+
   .my-table {
+    border: 1px solid #ddd;
+  }
+
+  .my-table,
+  .my-table tbody,
+  .my-table tr,
+  .my-table td {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .my-table td:nth-child(even) {
+    display: none;
+  }
+
+  .my-table tr {
+    margin-bottom: 15px;
+  }
+
+  .my-table td {
+    text-align: right;
+    padding-left: 50%;
+
+    position: relative;
+  }
+
+  .my-table td::before {
+    content: attr(data-aria-label);
+    position: absolute;
+    left: 0;
     width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
   }
 }

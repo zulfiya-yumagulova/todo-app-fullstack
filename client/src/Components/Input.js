@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Image from "./Image.js";
+import "./Input.css";
 
 export default function Input() {
   const [description, setDescription] = useState("");

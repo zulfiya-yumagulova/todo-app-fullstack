@@ -31,33 +31,31 @@ export default function ListTodos() {
 
   return (
     <Fragment>
-      <div className="container">
-        <table className="my-table">
-          <thead>
-            <tr>
-              <th>Description</th>
-              <th></th>
-              <th>Delete</th>
+      <table className="my-table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th></th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {todos.map((todo) => (
+            <tr key={todo.id}>
+              <td data-aria-label="Description">{todo.description}</td>
+              <td>{/* <EditTodo todo={todo} /> */}</td>
+              <td data-aria-label="Button">
+                <button
+                  className="btn btn-danger"
+                  onClick={() => deleteTodo(todo.id)}
+                >
+                  Delete
+                </button>
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {todos.map((todo) => (
-              <tr key={todo.id}>
-                <td>{todo.description}</td>
-                <td>{/* <EditTodo todo={todo} /> */}</td>
-                <td>
-                  <button
-                    className="btn btn-danger"
-                    onClick={() => deleteTodo(todo.id)}
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+          ))}
+        </tbody>
+      </table>
     </Fragment>
   );
 }
