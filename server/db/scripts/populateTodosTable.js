@@ -2,10 +2,11 @@ import todos from "../../todosData.js";
 import query from "../index.js";
 const sqlString = ``;
 
+// Insert todos into Todos table
 async function populateTodosTable() {
   for (let i = 0; i < todos.length; i++) {
     const todoDescription = todos[i].description;
-    console.log(todosg[i]);
+    console.log(todos[i]);
 
     const data = await query(
       `INSERT INTO todos (description) VALUES ($1) RETURNING description`,

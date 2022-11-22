@@ -4,6 +4,7 @@ import * as config from "../config.js";
 dotenv.config();
 // console.log("Env Var", config.user);
 
+// Connecting server with database
 const pool = new pg.Pool({
   user: config.user,
   host: config.host,

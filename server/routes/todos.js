@@ -8,6 +8,8 @@ import {
 } from "../models/todos.js";
 const todosRouter = express.Router();
 
+// Creating Routes
+
 /* GET TODOS listing. */
 todosRouter.get("/", async function (req, res) {
   const data = await getAllTodos();
